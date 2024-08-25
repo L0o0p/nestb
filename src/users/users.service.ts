@@ -60,4 +60,7 @@ export class UsersService {
       );
     }
   }
+  async findOne(username: string) {
+    return this.userRepository.find((user) => user.username === username);
+  }
 }
