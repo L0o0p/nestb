@@ -9,8 +9,10 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
     super();
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   async validate(username: string, password: string): Promise<any> {
-    const user = await this.authService.validateUser(username, password);
+    const a = { username, password };
+    const user = await this.authService.validateUser(a);
     if (!user) {
       throw new UnauthorizedException();
     }

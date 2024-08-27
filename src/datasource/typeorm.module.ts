@@ -16,7 +16,7 @@ import { Global, Module } from '@nestjs/common';
             host: 'localhost',
             port: 3306,
             username: 'root',
-            password: 'sgy12345',
+            password: 'new_password',
             database: 'nestx',
             synchronize: true,
             entities: [`${__dirname}/../**/**.entity{.ts,.js}`], // this will automatically load all entity file in the src folder
